@@ -1,32 +1,14 @@
-import { NextPage } from 'next'
-import React, { useState, useEffect } from 'react'
-import BookCard from '../../features/Book/BookCard'
-import styles from "../../styles/Products.module.css"
-
-
-export type Book = {name: string, id: string, image: string}
-export type Books = Book[]
+import type { NextPage } from 'next'
+import styles from '../../styles/Home.module.css'
 
 const Products: NextPage = () => {
-    const [books, setBooks] = useState<Books>([])
-
-    useEffect(() => {
-        fetch("http://localhost:3000/api/products")
-        .then((res) => res.json())
-        .then((data: Book[] )=> setBooks(data))
-    }, [books])
-    
-
-  return (
-    <main>
-        {/* //Stock
-        <BookCard/>  */}
-    </main>
-
-  )
+    return (
+        <div className={styles.container}>
+            <div className={styles.content}>
+                <h1 className={styles.heading} >Products</h1>
+            </div>
+        </div>
+    )
 }
-
-//Tienen predefinido styles.booksGrid para los libros 
-
 
 export default Products

@@ -1,13 +1,14 @@
-import React from 'react'
+import type { NextPage } from 'next'
+import styles from '../../styles/Home.module.css'
 
-const API = "http://localhost:3000/api/products/offers"
-
-const Offers = () => {
-  return (
-    <div>Offers</div>
-  )
+const ProductOffers: NextPage = () => {
+    return (
+        <div className={styles.container}>
+            <div className={styles.content}>
+                <h1 className={styles.heading} >Offers</h1>
+            </div>
+        </div>
+    )
 }
 
-
-
-export default Offers
+export default ProductOffers
